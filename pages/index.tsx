@@ -1,12 +1,15 @@
+import { MainLayout } from '@/components/layout'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import { NextPageWithLayout } from '../models'
 import styles from '../styles/Home.module.css'
 
-const Home: NextPage = () => {
+const Home: NextPageWithLayout = () => {
   return (
-    <div className={styles.container}>
+    <div>
+      <div className={styles.container}>
       <Head>
         <title>Learn Nextjs Dcode</title>
         <meta name="description" content="DCode - ..." />
@@ -69,7 +72,8 @@ const Home: NextPage = () => {
         </a>
       </footer>
     </div>
+    </div>
   )
 }
-
+Home.Layout = MainLayout
 export default Home

@@ -1,3 +1,4 @@
+import { MainLayout } from '@/components/layout'
 import { GetStaticProps, GetStaticPropsContext } from 'next'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -24,6 +25,8 @@ export default function PostListPage(props: PostListPageProps) {
     </div>
   )
 }
+
+PostListPage.Layout = MainLayout
 
 export const getStaticProps: GetStaticProps<PostListPageProps> = async (
   context: GetStaticPropsContext
