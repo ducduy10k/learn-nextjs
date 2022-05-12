@@ -1,4 +1,5 @@
 import { MainLayout, AdminLayout } from '@/components/layout'
+import { Box, Typography } from '@mui/material'
 import { GetStaticProps, GetStaticPropsContext } from 'next'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -11,7 +12,8 @@ export interface PostListPageProps {
 export default function PostListPage(props: PostListPageProps) {
   const router = useRouter()
   return (
-    <div>
+    <Box>
+      <Typography component='h1' variant='h3' color='primary.main'>Post</Typography>
       Post page :<p>Query : {JSON.stringify(router.query)}</p>
       <ul>
         {props.posts.map((post: any) => (
@@ -22,7 +24,7 @@ export default function PostListPage(props: PostListPageProps) {
           </li>
         ))}
       </ul>
-    </div>
+    </Box>
   )
 }
 
