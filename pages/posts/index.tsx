@@ -1,4 +1,4 @@
-import { MainLayout } from '@/components/layout'
+import { MainLayout, AdminLayout } from '@/components/layout'
 import { GetStaticProps, GetStaticPropsContext } from 'next'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -16,7 +16,7 @@ export default function PostListPage(props: PostListPageProps) {
       <ul>
         {props.posts.map((post: any) => (
           <li key={post.id}>
-            <Link href={`posts/${post.id}`}>
+            <Link href={`/posts/${post.id}`}>
               <a>{post.title}</a>
             </Link>
           </li>
@@ -26,7 +26,7 @@ export default function PostListPage(props: PostListPageProps) {
   )
 }
 
-PostListPage.Layout = MainLayout
+PostListPage.Layout = AdminLayout
 
 export const getStaticProps: GetStaticProps<PostListPageProps> = async (
   context: GetStaticPropsContext
