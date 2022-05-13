@@ -1,6 +1,9 @@
 import { LayoutProps } from '@/models/index';
+import { Stack } from '@mui/material';
+import { Box } from '@mui/system';
 import Link from 'next/link';
 import React, { useEffect } from 'react';
+import { Footer, Header } from '../common';
 
 export function MainLayout({ children }: LayoutProps) {
     useEffect(() => {
@@ -11,15 +14,16 @@ export function MainLayout({ children }: LayoutProps) {
     }, [])
 
     return (
-        <div>
-            <h1>Main layout</h1>
+        <Stack>
+            <Header/>
             <Link href='/'>
                 <a>Home</a>
             </Link>
             <Link href='/posts'>
                 <a>About</a>
             </Link>
-            <div>{children}</div>
-        </div>
+            <Box component="main">{children}</Box>
+            <Footer/>
+        </Stack>
     );
 }
