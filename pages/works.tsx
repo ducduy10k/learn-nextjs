@@ -1,12 +1,14 @@
+import { MainLayout } from '@/components/layout';
 import * as React from 'react';
 
-export interface IAppProps {
+export interface IWorkPageProps {
 }
 
-export default function App (props: IAppProps) {
+export default function WorkPage (props: IWorkPageProps) {
   return (
     <div>
-      
+      Works page
     </div>
   );
 }
+WorkPage.Layout = MainLayout
