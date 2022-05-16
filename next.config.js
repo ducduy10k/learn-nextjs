@@ -2,9 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['https://devduynd.tk', 'devduynd.tk'],
-    // formats: ['image/jpg']
-  },
+    domains: ['images.unsplash.com']
+  }
 }
 
 module.exports = nextConfig

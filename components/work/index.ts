@@ -1,1 +1,1 @@
-export * from './work-list';
+export * from './project-list';
