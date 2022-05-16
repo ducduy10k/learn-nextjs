@@ -1,7 +1,7 @@
 import { authApi } from '@/api/index';
+import { useAuth } from '@/hooks';
 
 import * as React from 'react';
-import { useAuth } from '@/hook/index';
 
 export default function LoginPage() {
 const {profile, error, login, logout} = useAuth({
