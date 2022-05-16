@@ -1,7 +1,6 @@
 import { Box, Button, Container, Stack, Typography } from '@mui/material';
 import Image from 'next/image';
 import * as React from 'react';
-import myInfo from './../../public/images/myInfo.jpg'
 export function HeroSection() {
     return (
         <Box pt={{xs: 4,md: 18}} pb={{xs: 7, md: 9}}>
@@ -25,7 +24,7 @@ export function HeroSection() {
                             borderRadius: '5px',
                         }
                     }}>
-                        <Image src={myInfo} alt='img-info' layout='responsive'/>
+                        {/* <Image src={myInfo} alt='img-info' layout='responsive'/> */}
                     </Box>
                 </Stack>
             </Container>

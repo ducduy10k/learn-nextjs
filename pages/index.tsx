@@ -1,4 +1,5 @@
 import { HeroSection } from '@/components/home';
+import { FeatureWork } from '@/components/home/featured-work';
 import { MainLayout } from '@/components/layout';
 import { Box } from '@mui/material';
 import type { NextPage } from 'next';
@@ -12,6 +13,7 @@ const Home: NextPageWithLayout = () => {
   return (
       <Box >
       <HeroSection/>
+      <FeatureWork/>
       </Box>
   );
 };
