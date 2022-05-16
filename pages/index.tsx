@@ -1,3 +1,4 @@
+import { HeroSection } from '@/components/home';
 import { MainLayout } from '@/components/layout';
 import { Box } from '@mui/material';
 import type { NextPage } from 'next';
@@ -10,7 +11,7 @@ import styles from '../styles/Home.module.css';
 const Home: NextPageWithLayout = () => {
   return (
       <Box >
-      Home page
+      <HeroSection/>
       </Box>
   );
 };
